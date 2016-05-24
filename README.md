@@ -1,24 +1,30 @@
 ts-webpack
 ===========================
 
-It's time consuming to combine all components together and make things work well.
-This project template helps you create a whole new project that comes with
-pre-installed typescript, webpack, babel settings together. Therefore, you can
-just code from `entry.ts` without worring anything about babel settings,
-webpack settings...
+It's always time consuming to combine all components together and make things
+work well.
 
-## Installation
+This project template helps you create a whole new project with out-of-the-box
+features including typescript, webpack, babel settings and so on...
+
+Just clone this repository to your disk, you can start coding from the
+`entry.ts` without worring anything about config files.
+
+## Install Tools
 
     sudo npm install typescript -g
     sudo npm install typings -g
     sudo npm install webpack -g
     sudo npm install webpack-dev-server -g
 
+
+## Build
+
+Install the dependencies
+
     sudo npm link typescript
     npm install
     typings install
-
-## Build
 
 Run webpack to build the files
 
