@@ -30,9 +30,11 @@ Run webpack-dev-server:
 
 Change 
 
-```json
-'entry': {
-    'myproj': ['./entry'],
+```js
+module.exports = {
+    'entry': {
+        'myproj': ['./entry'],
+    }
 }
 ```
 
