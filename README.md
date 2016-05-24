@@ -74,3 +74,10 @@ remove the `babel-loader` from `webpack.config.js`.
     ]
 }
 ```
+
+
+
+## Author
+
+Yo-An Lin (c9s)
+
