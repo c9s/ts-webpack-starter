@@ -1,0 +1,7 @@
+{
+  "globalDependencies": {
+    "d3": "registry:dt/d3#0.0.0+20160514171929",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "mocha": "registry:dt/mocha#2.2.5+20160317120654"
+  }
+}
