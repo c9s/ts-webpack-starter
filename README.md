@@ -1,5 +1,11 @@
-ts-webpack template project
+ts-webpack
 ===========================
+
+It's time consuming to combine all components together and make things work well.
+This project template helps you create a whole new project that comes with
+pre-installed typescript, webpack, babel settings together. Therefore, you can
+just code from `entry.ts` without worring anything about babel settings,
+webpack settings...
 
 ## Installation
 
