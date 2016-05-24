@@ -12,6 +12,7 @@ Just clone this repository to your disk, you can start coding from the
 
 ## Install Tools
 
+    sudo npm install typedoc -g
     sudo npm install typescript -g
     sudo npm install typings -g
     sudo npm install webpack -g
@@ -35,6 +36,16 @@ Run webpack-dev-server:
     webpack-dev-server
 
 ## Guide
+
+### Rename all files from .js to .ts
+
+Get `fsrename`
+
+    go get -u -x github.com/c9s/fsrename/fsrename
+
+Rename files:
+
+    fsrename -replace .js -with .ts src/
 
 ### Modify your webpack target entry name
 
@@ -64,6 +75,10 @@ Sample commands:
     typings install dt~d3 --save --global
     typings install dt~jquery --save --global
     typings install dt~mocha --save --global
+
+### Generate typedoc
+
+    typedoc --target es6 --out doc typings/index.d.ts src
 
 ### ts-loader + babel-loader is too slow!?
 
