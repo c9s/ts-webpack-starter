@@ -24,6 +24,10 @@ Run webpack-dev-server:
 
 ## Guide
 
+### Start Coding
+
+Just start coding from `entry.ts` and `src/...` without worring anything!
+
 ### Get Your Type Definition Files
 
 Sample commands:
