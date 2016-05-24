@@ -24,6 +24,21 @@ Run webpack-dev-server:
 
 ## Guide
 
+### Modify your webpack target entry name
+
+    vim webpack.config.js
+
+Change 
+
+```json
+'entry': {
+    'myproj': ['./entry'],
+}
+```
+
+To whatever you want.
+
+
 ### Start Coding
 
 Just start coding from `entry.ts` and `src/...` without worring anything!
@@ -35,6 +50,11 @@ Sample commands:
     typings install dt~d3 --save --global
     typings install dt~jquery --save --global
     typings install dt~mocha --save --global
+
+### ts-loader + babel-loader is too slow!?
+
+You can simply change the `target` from `es6` to `es5` in `tsconfig.json` and
+remove the `babel-loader` from `webpack.config.js`.
 
 ### Advanced babelrc Config File
 
