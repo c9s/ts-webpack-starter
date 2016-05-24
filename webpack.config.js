@@ -9,6 +9,8 @@ module.exports = {
     'path': __dirname,
     'filename': '[name].js'
   },
+  'debug': true,
+  'devtool': 'source-map',
   'module': {
     'loaders': [
       // ts-loader: convert typescript (es6) to javascript (es6),
