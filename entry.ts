@@ -1,1 +1,1 @@
-import Foo from "Foo";
+import Foo from "./src/Foo";
