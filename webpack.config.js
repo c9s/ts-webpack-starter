@@ -36,7 +36,7 @@ module.exports = {
   'plugins': [],
   'resolve': {
     'root': [path.resolve('./src')],
-    'extensions': ['', '.js', '.jsx', '.ts', '.tsx'],
+    'extensions': ['', '.ts', '.tsx', '.js', '.jsx'],
 
     // this is only required when we "import 'jquery'"
     // 'alias': { 'jquery': path.join(__dirname, "vendor", "jquery-2.2.0.min.js") }
