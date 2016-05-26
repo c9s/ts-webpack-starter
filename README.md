@@ -37,6 +37,20 @@ Run webpack-dev-server:
 
 ## Guide
 
+
+### The Current Setup
+
+tsconfig: `target` is set to "es5", so you don't have to convert es6 classes
+with babel, this makes browsers comfortable with the compiled files. if you want
+to develop node js modules, then setting target to es6 should just fine.
+
+webpack: right now the config separates .ts, .js loaders, so you don't have to
+pipe tsc output to babel loader, which is slower.  If you really want your tsc
+es6 output to be compiled into es5. use `webpack.config.es6-to-es5.js` config
+instead.
+
+
+
 ### Rename all files from .js to .ts
 
 Get `fsrename`
@@ -105,7 +119,7 @@ remove the `babel-loader` from `webpack.config.js`.
 ```
 
 
-### FAQ
+### FAQ and Trouble Shooting
 
 #### Cannot find module '...'
 
@@ -120,6 +134,27 @@ Simply run:
 
 Then re-compile, it should work.
 
+#### Why using `import assign = require("object-assign");`
+
+This is because TypeScript can't properly loads node modules with es6 import
+syntax well. for example:
+
+    import assign from "object-assign";
+    assign({}, ...);
+
+The assign call above is converted to:
+
+    assign.default({}, ...);
+
+And this:
+
+    import * as assign from "object-assign";
+    assign({}, ...);
+
+Occurs error like:
+
+    error TS2497: Module ''object-assign'' resolves to a non-module entity and
+    cannot be imported using this construct.
 
 
 

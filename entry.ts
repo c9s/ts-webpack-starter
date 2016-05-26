@@ -1,2 +1,2 @@
 import Foo from "./src/Foo";
-window['Foo'] = Foo;
+var foo = new Foo({ name: "Ally" });

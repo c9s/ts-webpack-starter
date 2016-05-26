@@ -13,11 +13,9 @@ module.exports = {
   'devtool': 'source-map',
   'module': {
     'loaders': [
-      // ts-loader: convert typescript (es6) to javascript (es6),
-      // babel-loader: converts javascript (es6) to javascript (es5)
       {
         'test': /\.tsx?$/,
-        'loaders': ['babel-loader','ts-loader'],
+        'loaders': ['ts-loader'],
         'exclude': [/node_modules/,nodeModulesPath]
       },
       // babel-loader for pure javascript (es6)
