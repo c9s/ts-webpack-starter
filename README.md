@@ -170,7 +170,9 @@ This is because `object-assign` exports the function using `module.exports = {fu
 module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 ```
 
-See also: https://github.com/Microsoft/TypeScript/issues/7518
+See also:
+- https://github.com/Microsoft/TypeScript/issues/7518
+- https://github.com/Microsoft/TypeScript/issues/2719
 
 
 
