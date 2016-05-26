@@ -105,6 +105,24 @@ remove the `babel-loader` from `webpack.config.js`.
 ```
 
 
+### FAQ
+
+#### Cannot find module '...'
+
+For example, you encountered this error message:
+
+    Cannot find module 'object-assign'
+
+Simply run:
+
+    npm install object-assign --save
+    typings install object-assign --save
+
+Then re-compile, it should work.
+
+
+
+
 
 ## Author
 
