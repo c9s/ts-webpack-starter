@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+- "5"
+- "4"
+env:
+  - WEBPACK_CONFIG=webpack.config.es6-to-es5.js
+  - WEBPACK_CONFIG=webpack.config.js
+install:
+- npm install typescript -g
+- npm install typings -g
+- npm install webpack -g
+- npm install
+- npm link typescript
+- typings install
+script:
+- webpack --config $WEBPACK_CONFIG
+- node bundle.js
+cache:
+  directories:
+  - node_modules

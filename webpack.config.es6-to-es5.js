@@ -10,7 +10,7 @@ var nodeModulesPath = path.resolve(__dirname, 'node_modules');
 var webpack = require('webpack');
 module.exports = {
   'entry': {
-    'myproj': ['./entry'],
+    'bundle': ['./entry'],
   },
   'output': {
     'path': __dirname,

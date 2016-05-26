@@ -1,6 +1,9 @@
 ts-webpack
 ===========================
 
+[![Build Status](https://travis-ci.org/c9s/ts-webpack.svg?branch=master)](https://travis-ci.org/c9s/ts-webpack)
+
+
 It's always time consuming to combine all components together and make things
 work well.
 
@@ -119,7 +122,7 @@ remove the `babel-loader` from `webpack.config.js`.
 ```
 
 
-### FAQ and Trouble Shooting
+### Trouble Shooting
 
 #### Cannot find module '...'
 
@@ -134,19 +137,24 @@ Simply run:
 
 Then re-compile, it should work.
 
-#### Why using `import assign = require("object-assign");`
+
+### FAQ
+
+#### Why use `import assign = require("object-assign");` instead of es6 import?
 
 This is because TypeScript can't properly loads node modules with es6 import
-syntax well. for example:
+syntax with non-default export modules. for example:
 
     import assign from "object-assign";
     assign({}, ...);
 
-The assign call above is converted to:
+The assign call above will be converted to:
 
     assign.default({}, ...);
 
-And this:
+However object-assign doesn't export "exports.default", this causes error in the runtime.
+
+With the suggested es6 import statement:
 
     import * as assign from "object-assign";
     assign({}, ...);
@@ -156,6 +164,13 @@ Occurs error like:
     error TS2497: Module ''object-assign'' resolves to a non-module entity and
     cannot be imported using this construct.
 
+This is because `object-assign` exports the function using `module.exports = {function}`.
+
+```js
+module.exports = shouldUseNative() ? Object.assign : function (target, source) {
+```
+
+See also: https://github.com/Microsoft/TypeScript/issues/7518
 
 
 
